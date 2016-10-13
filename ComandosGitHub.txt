@@ -1,0 +1,47 @@
+git help <comando> --> muestra ayuda sobre el comando. 
+git <comando> help --> muestra ayuda sobre el comando.
+git init --> inicia el seguimiento de git en el directorio actual (crea el repositorio .git).
+git clone "ruta de repositorio git" --> clona un directorio en el directorio actual.
+git status --> muestra el estado del directorio de trabajo.
+git status --short --> similar al anterior pero con salida simplificada. 
+git status -s --> similar al anterior pero abreviado. 
+git add "fichero" --> agrega el fichero a la cola de preparados para commit. 
+git add . --> agrega todos los ficheros modificados a la cola de preparados para commit. 
+git diff --> muestra las diferencias entre el área de preparación y el directorio de trabajo.
+git diff --staged --> muestra las diferencias entre el área de preparación y la última instantánea.
+git commit --> crea una instantanea del directorio de trabajo con los ficheros agregados al área de preparados.
+git commit -m "comentario" --> realiza la instantánea con el comentario directamente, sin que se abra el editor.
+git log --> lista los commits realizados en orden cronológico inverso.
+git log -p -2 --> lista los dos últimos commits realizados mostrando las diferencias introducidas por cada uno.
+git log --stat --> lista los commits mostrando estadísticas resumidas. 
+git log --oneline --> muestra los commits de forma resumida en una línea. 
+git log --decorate --> muestra los commits con decoración. 
+git log --graph --> muestra los commits en forma de grafo.
+git log --all --> muestra los commits de todas las ramas. 
+git commit --amend --> reemplaza el último commit añadiendo el contenido del área de preparación y le modifica el mensaje de modificación.
+git diff "numCommit" "numCommit" --> muestra las diferencias entre los dos commits. 
+git rm "fichero" --> elimina el fichero del repositorio. 
+git rm -f "fichero" --> fuerza a eliminar del área de preparados el fichero (por si antes fue agregado a través del "add" al área de preparados).
+git mv "fichero" "ficheroRenombrado" --> renombra el archivo "fichero" a "ficheroRenombrado".
+git checkout -- "fichero" --> revierte los cambios realizados en fichero al estado en que se encontraba en su última instantánea.
+git reset HEAD "fichero" --> saca el fichero del área de preparados. 
+git rm --cached "fichero" --> el fichero deja de ser seguido por Git. 
+git reset "numCommit" --> elimina las confirmaciones posteriores a las que tiene ese hash. Los cambios que se habían realizado en los commits borrados pasan a estar en el estado de modificados. 
+git reset --hard "numComit" --> igual que el anterior pero los cambios que se hubieran realizado en commits posteriores son eliminados. 
+git reset --soft "numComit" --> igual que los anteriores pero los cambios esta vez pasan al área de preparados.
+git revert "numComit" --> crea un nuevo commit revirtiendo los cambios introducidos por todos los commits posteriores al indicado. 
+git branch "nuevaRama" --> crea una nueva rama (un nuevo puntero) llamado "nuevaRama" que apunta al último commit realizado. 
+git checkout "nuevaRama" --> posiciona el puntero HEAD para que apunte a "nuevaRama". 
+git checkout -b "nuevaRama" --> crea una nueva rama y se posiciona en ella. 
+git branch --> lista las ramas del repositorio. La rama apuntada por HEAD se muestra con un *.
+git branch --merged --> lista las ramas que han sido fusionadas. 
+git branch --mo-merged --> lista las ramas que aún no han sido modificadas. 
+git merge "rama" --> fusiona la rama "rama" con la rama en la que estemos trabajando.
+git branch -d "rama" --> borra la rama (su puntero). Si la rama no ha sido previamente fusionada, no ejecutará el comando. 
+git branch -D "rama" --> borra la rama aunque no haya sido fusionada. 
+git merge --abort --> aborta una fusión ya iniciada. 
+git rebase master --> posicionados en alguna otra rama, reescribe la historia de la rama master. Incorpora los commits realizados en master en la rama en la que estemos posicionados, así, no quedará rastro de que alguna vez la rama master divergió. 
+git remote add "nombre" "ruta" --> agrega el repositorio remoto que especifica la ruta al repositorio local y le asigna un nombre. Esto se usa cuando ya tenemos un repositorio local y queremos sincronizarlo a uno remoto. 
+git remote -v --> lista los repositorios remotos vinculados al repositorio local. 
+git branch --remotes --> lista las ramas remotas del repositorio. 
+
